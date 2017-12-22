@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="examples">
+    <CLASSES />
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/../pdfbox-layout-master/examples" />
+      <root url="file://$PROJECT_DIR$/../pdfbox-layout-master/pdfbox2-layout/compatibility" />
+      <root url="file://$PROJECT_DIR$/../pdfbox-layout-master/src/main/java" />
+      <root url="file://$PROJECT_DIR$/../pdfbox-layout-master/src/test/java" />
+    </SOURCES>
+  </library>
+</component>

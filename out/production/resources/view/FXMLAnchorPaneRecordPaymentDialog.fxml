@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.emp.controller.FXMLAnchorPaneRecordPaymentDialogController">
+   <children>
+      <SplitPane dividerPositions="0.23244147157190637" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <TableView fx:id="tableViewEmployee" prefHeight="398.0" prefWidth="175.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <columns>
+                      <TableColumn fx:id="tableColumnEmployeeName" prefWidth="138.0" text="Employee" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <Label fx:id="labelEmployeeName" layoutX="30.0" layoutY="47.0" text="Label" />
+                  <TextField fx:id="textFieldHourRate" layoutX="342.0" layoutY="43.0" prefHeight="25.0" prefWidth="35.0" />
+                  <Label layoutX="288.0" layoutY="47.0" text="Pay Rate" />
+                  <GridPane layoutX="16.0" layoutY="164.0" prefHeight="90.0" prefWidth="418.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="27.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="33.0" minHeight="10.0" prefHeight="33.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label fx:id="labelMonthDay1" textAlignment="CENTER" />
+                        <Label fx:id="labelMonthDay2" textAlignment="CENTER" GridPane.columnIndex="1" />
+                        <Label fx:id="labelMonthDay3" textAlignment="CENTER" GridPane.columnIndex="2" />
+                        <Label fx:id="labelMonthDay4" textAlignment="CENTER" GridPane.columnIndex="3" />
+                        <Label fx:id="labelMonthDay5" textAlignment="CENTER" GridPane.columnIndex="4" />
+                        <Label fx:id="labelMonthDay6" textAlignment="CENTER" GridPane.columnIndex="5" />
+                        <Label fx:id="labelMonthDay7" textAlignment="CENTER" GridPane.columnIndex="6" />
+                        <Label fx:id="labelWeekDay1" textAlignment="CENTER" GridPane.rowIndex="1" />
+                        <Label fx:id="labelWeekDay2" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Label fx:id="labelWeekDay3" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <Label fx:id="labelWeekDay4" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                        <Label fx:id="labelWeekDay5" textAlignment="CENTER" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                        <Label fx:id="labelWeekDay6" prefWidth="33.0" textAlignment="CENTER" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+                        <Label fx:id="labelWeekDay7" textAlignment="CENTER" GridPane.columnIndex="6" GridPane.rowIndex="1" />
+                        <TextField fx:id="textFieldMonday" GridPane.rowIndex="2" />
+                        <TextField fx:id="textFieldTuesday" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <TextField fx:id="textFieldWednesday" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                        <TextField fx:id="textFieldThursday" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                        <TextField fx:id="textFieldFriday" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                        <TextField fx:id="textFieldSaturday" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+                        <TextField fx:id="textFieldSunday" GridPane.columnIndex="6" GridPane.rowIndex="2" />
+                     </children>
+                  </GridPane>
+                  <Button layoutX="19.0" layoutY="119.0" mnemonicParsing="false" onAction="#previousWeek" text="&lt;Week" />
+                  <Button layoutX="377.0" layoutY="119.0" mnemonicParsing="false" onAction="#nextWeek" text="Week&gt;" />
+                  <Label fx:id="labelMonthYear" layoutX="192.0" layoutY="126.0">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></Label>
+                  <Button layoutX="120.0" layoutY="326.0" mnemonicParsing="false" onAction="#handleButtonSaveClick" text="Button" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
